@@ -53,15 +53,15 @@ input, button {
   margin-right: 30px;
 }
 
-.postList {
+.postListDiv {
   width: 700px;
   padding: 14px 12px 23px 12px;
 }
 
-.postList ul {
+.postList {
   list-style: none;
 }
 
-.postList ul li {
+.post {
   padding: 12px;
 }
