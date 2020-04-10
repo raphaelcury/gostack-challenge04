@@ -64,4 +64,45 @@ input, button {
 
 .post {
   padding: 12px;
+  background: #fff;
+  margin-top: 20px;
+}
+
+.post:first-child {
+  margin-top: 0;
+}
+
+.postUser {
+  display: flex;
+}
+
+.postUser img {
+  width: 40px;
+  margin-right: 15px;
+}
+
+.postUser strong {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  font-size: 17px;
+}
+
+.postUser strong span {
+  font-size: 13px;
+  font-weight: normal;
+  color: darkgrey;
+}
+
+.post p {
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.post .comments {
+  border-top: 1px solid lightgrey;
+  padding-top: 20px;
+  margin: 20px;
+  list-style: none;
 }
