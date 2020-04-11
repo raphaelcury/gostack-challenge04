@@ -1,20 +1,18 @@
 import React from 'react';
 
-import avatar from '../img/avatar.png';
+import Comment from './Comment';
 
-function Post() {
+function Post({ data }) {
   return (
     <li className="post">
       <div className="postUser">
-        <img src={avatar} alt="Avatar"/>
-        <strong >Raphael Cury <span>04 Jun 2019</span></strong>
+        <img src={data.author.avatar} alt="Avatar"/>
+        <strong >{data.author.name} <span>{data.date}</span></strong>
       </div>
-      <p>Pessoal, alguém sabe quando acaba a quarentena?</p>
+      <p>{data.content}</p>
       <ul className="comments">
-        <li>Comentário 1</li>
-        <li>Comentário 2</li>
-        <li>Comentário 3</li>
-        <li>Comentário 4</li>
+        {data.comments.map(comment =>
+          <Comment key={comment.id} data={comment} />)}
       </ul>
     </li>
   );
